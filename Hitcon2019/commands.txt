@@ -1,0 +1,84 @@
+# Exploit Location : https://www.exploit-db.com/exploits/47297
+
+root@kali:/usr/share/metasploit-framework# ls
+app            lib                           msfrpc     ruby
+config         metasploit-framework.gemspec  msfrpcd    script-exploit
+data           modules                       msfupdate  script-password
+db             msfconsole                    msfvenom   script-recon
+documentation  msfd                          msf-ws.ru  scripts
+Gemfile        msfdb                         plugins    tools
+Gemfile.lock   msf-json-rpc.ru               Rakefile   vendor
+root@kali:/usr/share/metasploit-framework# cd modules/
+root@kali:/usr/share/metasploit-framework/modules# ls
+auxiliary  encoders  evasion  exploits  nops  payloads  post
+root@kali:/usr/share/metasploit-framework/modules# cd exploits/
+root@kali:/usr/share/metasploit-framework/modules/exploits# ls
+aix        bsd     example.rb  hpux   mainframe  osx      unix
+android    bsdi    firefox     irix   multi      qnx      windows
+apple_ios  dialup  freebsd     linux  netware    solaris
+root@kali:/usr/share/metasploit-framework/modules/exploits# vi pulse.rb
+root@kali:/usr/share/metasploit-framework/modules/exploits# ls
+aix        bsd     example.rb  hpux   mainframe  osx       solaris
+android    bsdi    firefox     irix   multi      pulse.rb  unix
+apple_ios  dialup  freebsd     linux  netware    qnx       windows
+root@kali:/usr/share/metasploit-framework/modules/exploits# mv pulse.rb linux/
+root@kali:/usr/share/metasploit-framework/modules/exploits# ls
+aix        bsd     example.rb  hpux   mainframe  osx      unix
+android    bsdi    firefox     irix   multi      qnx      windows
+apple_ios  dialup  freebsd     linux  netware    solaris
+root@kali:/usr/share/metasploit-framework/modules/exploits# cd linux/
+root@kali:/usr/share/metasploit-framework/modules/exploits# cd linux/
+root@kali:/usr/share/metasploit-framework/modules/exploits/linux# ls
+antivirus  games  imap   mysql     pptp      redis  snmp    upnp
+browser    http   local  pop3      proxy     samba  ssh
+ftp        ids    misc   postgres  pulse.rb  smtp   telnet
+root@kali:/usr/share/metasploit-framework/modules/exploits/linux# mkdir vpn
+root@kali:/usr/share/metasploit-framework/modules/exploits/linux# mv pulse.rb vpn/
+root@kali:/usr/share/metasploit-framework/modules/exploits/linux# ls
+antivirus  games  imap   mysql     pptp   samba  ssh     vpn
+browser    http   local  pop3      proxy  smtp   telnet
+ftp        ids    misc   postgres  redis  snmp   upnp
+root@kali:/usr/share/metasploit-framework/modules/exploits/linux# ls -lah s
+ls: cannot access 's': No such file or directory
+root@kali:/usr/share/metasploit-framework/modules/exploits/linux# cd sh
+bash: cd: sh: No such file or directory
+root@kali:/usr/share/metasploit-framework/modules/exploits/linux# cd ssh/
+root@kali:/usr/share/metasploit-framework/modules/exploits/linux/ssh# ls
+ceragon_fibeair_known_privkey.rb             quantum_dxi_known_privkey.rb
+cisco_ucs_scpuser.rb                         quantum_vmpro_backdoor.rb
+exagrid_known_privkey.rb                     solarwinds_lem_exec.rb
+f5_bigip_known_privkey.rb                    symantec_smg_ssh.rb
+loadbalancerorg_enterprise_known_privkey.rb  vmware_vdp_known_privkey.rb
+mercurial_ssh_exec.rb
+root@kali:/usr/share/metasploit-framework/modules/exploits/linux/ssh# ls -alh
+root@kali:/usr/share/metasploit-framework/modules/exploits/linux/ssh# ls -alh
+total 84K
+drwxr-xr-x  2 root root 4.0K Oct  6 17:51 .
+drwxr-xr-x 24 root root 4.0K Oct 12 01:14 ..
+-rw-r--r--  1 root root 4.6K Oct  3 13:12 ceragon_fibeair_known_privkey.rb
+-rw-r--r--  1 root root 4.2K Oct  3 13:12 cisco_ucs_scpuser.rb
+-rw-r--r--  1 root root 5.9K Oct  3 13:12 exagrid_known_privkey.rb
+-rw-r--r--  1 root root 4.5K Oct  3 13:12 f5_bigip_known_privkey.rb
+-rw-r--r--  1 root root 4.2K Oct  3 13:12 loadbalancerorg_enterprise_known_privkey.rb
+-rw-r--r--  1 root root 3.8K Oct  3 13:12 mercurial_ssh_exec.rb
+-rw-r--r--  1 root root 4.1K Oct  3 13:12 quantum_dxi_known_privkey.rb
+-rw-r--r--  1 root root 3.7K Oct  3 13:12 quantum_vmpro_backdoor.rb
+-rw-r--r--  1 root root 5.3K Oct  3 13:12 solarwinds_lem_exec.rb
+-rw-r--r--  1 root root 3.8K Oct  3 13:12 symantec_smg_ssh.rb
+-rw-r--r--  1 root root 4.9K Oct  3 13:12 vmware_vdp_known_privkey.rb
+root@kali:/usr/share/metasploit-framework/modules/exploits/linux/ssh# cd ..
+root@kali:/usr/share/metasploit-framework/modules/exploits/linux# ls
+antivirus  games  imap   mysql     pptp   samba  ssh     vpn
+browser    http   local  pop3      proxy  smtp   telnet
+ftp        ids    misc   postgres  redis  snmp   upnp
+root@kali:/usr/share/metasploit-framework/modules/exploits/linux# cd vpn/
+root@kali:/usr/share/metasploit-framework/modules/exploits/linux/vpn# ls
+pulse.rb
+root@kali:/usr/share/metasploit-framework/modules/exploits/linux/vpn# ls -alh
+root@kali:/usr/share/metasploit-framework/modules/exploits/linux/vpn# ls -alh
+total 12K
+drwxr-xr-x  2 root root 4.0K Oct 12 01:14 .
+drwxr-xr-x 24 root root 4.0K Oct 12 01:14 ..
+-rw-r--r--  1 root root 2.3K Oct 12 01:13 pulse.rb
+root@kali:/usr/share/metasploit-framework/modules/exploits/linux/vpn# 
+
