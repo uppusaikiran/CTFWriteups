@@ -1,0 +1,47 @@
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-11-07 22:09 EST
+Nmap scan report for 10.10.10.3
+Host is up (0.032s latency).
+Not shown: 996 filtered ports
+PORT    STATE SERVICE     VERSION
+21/tcp  open  ftp         vsftpd 2.3.4
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+|_sslv2-drown: 
+22/tcp  open  ssh         OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+| vulners: 
+|   cpe:/a:openbsd:openssh:4.7p1: 
+|     	CVE-2010-4478	7.5	https://vulners.com/cve/CVE-2010-4478
+|     	CVE-2017-15906	5.0	https://vulners.com/cve/CVE-2017-15906
+|     	CVE-2016-10708	5.0	https://vulners.com/cve/CVE-2016-10708
+|     	CVE-2010-4755	4.0	https://vulners.com/cve/CVE-2010-4755
+|_    	CVE-2008-5161	2.6	https://vulners.com/cve/CVE-2008-5161
+139/tcp open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+|_smb-vuln-webexec: ERROR: Script execution failed (use -d to debug)
+445/tcp open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+|_smb-vuln-webexec: ERROR: Script execution failed (use -d to debug)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: OpenWrt White Russian 0.9 (Linux 2.4.30) (92%), Linux 2.6.23 (92%), Belkin N300 WAP (Linux 2.6.30) (92%), Control4 HC-300 home controller (92%), D-Link DAP-1522 WAP, or Xerox WorkCentre Pro 245 or 6556 printer (92%), Dell Integrated Remote Access Controller (iDRAC5) (92%), Dell Integrated Remote Access Controller (iDRAC6) (92%), Linksys WET54GS5 WAP, Tranzeo TR-CPQ-19f WAP, or Xerox WorkCentre Pro 265 printer (92%), Linux 2.4.21 - 2.4.31 (likely embedded) (92%), Citrix XenServer 5.5 (Linux 2.6.18) (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_smb-double-pulsar-backdoor: ERROR: Script execution failed (use -d to debug)
+|_smb-vuln-cve-2017-7494: ERROR: Script execution failed (use -d to debug)
+|_smb-vuln-ms06-025: ERROR: Script execution failed (use -d to debug)
+|_smb-vuln-ms07-029: ERROR: Script execution failed (use -d to debug)
+|_smb-vuln-ms08-067: ERROR: Script execution failed (use -d to debug)
+|_smb-vuln-ms10-054: false
+|_smb-vuln-ms10-061: false
+|_smb-vuln-ms17-010: ERROR: Script execution failed (use -d to debug)
+|_smb-vuln-regsvc-dos: ERROR: Script execution failed (use -d to debug)
+
+TRACEROUTE (using port 139/tcp)
+HOP RTT      ADDRESS
+1   32.36 ms 10.10.14.1
+2   32.77 ms 10.10.10.3
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 53.13 seconds

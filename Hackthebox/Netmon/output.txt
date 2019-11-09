@@ -1,0 +1,68 @@
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-11-09 13:03 EST
+Nmap scan report for 10.10.10.152
+Host is up (0.049s latency).
+Not shown: 65522 closed ports
+PORT      STATE SERVICE      VERSION
+21/tcp    open  ftp          Microsoft ftpd
+80/tcp    open  http         Indy httpd 18.1.37.13946 (Paessler PRTG bandwidth monitor)
+|_http-server-header: PRTG/18.1.37.13946
+135/tcp   open  msrpc        Microsoft Windows RPC
+139/tcp   open  netbios-ssn  Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+5985/tcp  open  http         Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+47001/tcp open  winrm?
+| fingerprint-strings: 
+|   JavaRMI: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/html; charset=us-ascii
+|     Server: Microsoft-HTTPAPI/2.0
+|     Date: Sat, 09 Nov 2019 18:03:36 GMT
+|     Connection: close
+|     Content-Length: 326
+|     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd">
+|     <HTML><HEAD><TITLE>Bad Request</TITLE>
+|     <META HTTP-EQUIV="Content-Type" Content="text/html; charset=us-ascii"></HEAD>
+|     <BODY><h2>Bad Request - Invalid Verb</h2>
+|     <hr><p>HTTP Error 400. The request verb is invalid.</p>
+|_    </BODY></HTML>
+49664/tcp open  unknown
+49665/tcp open  unknown
+49666/tcp open  unknown
+49667/tcp open  unknown
+49668/tcp open  unknown
+49669/tcp open  unknown
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port47001-TCP:V=7.80%I=7%D=11/9%Time=5DC6FFA7%P=x86_64-pc-linux-gnu%r(J
+SF:avaRMI,1F9,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text
+SF:/html;\x20charset=us-ascii\r\nServer:\x20Microsoft-HTTPAPI/2\.0\r\nDate
+SF::\x20Sat,\x2009\x20Nov\x202019\x2018:03:36\x20GMT\r\nConnection:\x20clo
+SF:se\r\nContent-Length:\x20326\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-/
+SF:/W3C//DTD\x20HTML\x204\.01//EN\"\"http://www\.w3\.org/TR/html4/strict\.
+SF:dtd\">\r\n<HTML><HEAD><TITLE>Bad\x20Request</TITLE>\r\n<META\x20HTTP-EQ
+SF:UIV=\"Content-Type\"\x20Content=\"text/html;\x20charset=us-ascii\"></HE
+SF:AD>\r\n<BODY><h2>Bad\x20Request\x20-\x20Invalid\x20Verb</h2>\r\n<hr><p>
+SF:HTTP\x20Error\x20400\.\x20The\x20request\x20verb\x20is\x20invalid\.</p>
+SF:\r\n</BODY></HTML>\r\n");
+Device type: firewall
+Running (JUST GUESSING): Fortinet embedded (87%)
+OS CPE: cpe:/h:fortinet:fortigate_100d
+Aggressive OS guesses: Fortinet FortiGate 100D firewall (87%)
+No exact OS matches for host (test conditions non-ideal).
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: -47s
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2019-11-09T18:04:34
+|_  start_date: 2019-11-09T17:48:29
+
+TRACEROUTE (using port 1723/tcp)
+HOP RTT    ADDRESS
+1   ... 30
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 112.64 seconds
