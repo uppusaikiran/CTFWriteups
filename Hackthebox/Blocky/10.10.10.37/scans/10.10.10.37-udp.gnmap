@@ -1,0 +1,4 @@
+# Nmap 7.80 scan initiated Mon Nov 11 14:05:09 2019 as: nmap -sC -sV -sU -Pn --disable-arp-ping -oA /root/CTF/Hackthebox/Blocky/10.10.10.37/scans/10.10.10.37-udp 10.10.10.37
+Host: 10.10.10.37 ()	Status: Up
+Host: 10.10.10.37 ()	Ports: 22/closed/udp//ssh///, 80/closed/udp//http///	Ignored State: open|filtered (998)
+# Nmap done at Mon Nov 11 21:20:38 2019 -- 1 IP address (1 host up) scanned in 26129.72 seconds

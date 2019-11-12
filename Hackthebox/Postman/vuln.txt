@@ -1,0 +1,116 @@
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-11-11 01:07 EST
+Nmap scan report for 10.10.10.160
+Host is up (0.029s latency).
+Not shown: 997 closed ports
+PORT      STATE SERVICE VERSION
+22/tcp    open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+80/tcp    open  http    Apache httpd 2.4.29 ((Ubuntu))
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-enum: 
+|   /css/: Potentially interesting directory w/ listing on 'apache/2.4.29 (ubuntu)'
+|   /images/: Potentially interesting directory w/ listing on 'apache/2.4.29 (ubuntu)'
+|   /js/: Potentially interesting directory w/ listing on 'apache/2.4.29 (ubuntu)'
+|_  /upload/: Potentially interesting directory w/ listing on 'apache/2.4.29 (ubuntu)'
+| http-internal-ip-disclosure: 
+|_  Internal IP Leaked: 127.0.1.1
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+| http-sql-injection: 
+|   Possible sqli for queries:
+|     http://10.10.10.160:80/js/?C=D%3bO%3dA%27%20OR%20sqlspider
+|     http://10.10.10.160:80/js/?C=S%3bO%3dA%27%20OR%20sqlspider
+|     http://10.10.10.160:80/js/?C=N%3bO%3dD%27%20OR%20sqlspider
+|     http://10.10.10.160:80/js/?C=M%3bO%3dA%27%20OR%20sqlspider
+|     http://10.10.10.160:80/js/?C=N%3bO%3dA%27%20OR%20sqlspider
+|     http://10.10.10.160:80/js/?C=S%3bO%3dA%27%20OR%20sqlspider
+|     http://10.10.10.160:80/js/?C=D%3bO%3dD%27%20OR%20sqlspider
+|     http://10.10.10.160:80/js/?C=M%3bO%3dA%27%20OR%20sqlspider
+|     http://10.10.10.160:80/js/?C=N%3bO%3dA%27%20OR%20sqlspider
+|     http://10.10.10.160:80/js/?C=D%3bO%3dA%27%20OR%20sqlspider
+|     http://10.10.10.160:80/js/?C=S%3bO%3dD%27%20OR%20sqlspider
+|_    http://10.10.10.160:80/js/?C=M%3bO%3dA%27%20OR%20sqlspider
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+| vulners: 
+|   cpe:/a:apache:http_server:2.4.29: 
+|     	CVE-2019-0211	7.2	https://vulners.com/cve/CVE-2019-0211
+|     	CVE-2018-1312	6.8	https://vulners.com/cve/CVE-2018-1312
+|     	CVE-2017-15715	6.8	https://vulners.com/cve/CVE-2017-15715
+|     	CVE-2019-10082	6.4	https://vulners.com/cve/CVE-2019-10082
+|     	CVE-2019-10098	5.8	https://vulners.com/cve/CVE-2019-10098
+|     	CVE-2019-10081	5.0	https://vulners.com/cve/CVE-2019-10081
+|     	CVE-2019-0220	5.0	https://vulners.com/cve/CVE-2019-0220
+|     	CVE-2019-0196	5.0	https://vulners.com/cve/CVE-2019-0196
+|     	CVE-2018-17199	5.0	https://vulners.com/cve/CVE-2018-17199
+|     	CVE-2018-1333	5.0	https://vulners.com/cve/CVE-2018-1333
+|     	CVE-2017-15710	5.0	https://vulners.com/cve/CVE-2017-15710
+|     	CVE-2019-0197	4.9	https://vulners.com/cve/CVE-2019-0197
+|     	CVE-2019-10092	4.3	https://vulners.com/cve/CVE-2019-10092
+|     	CVE-2018-11763	4.3	https://vulners.com/cve/CVE-2018-11763
+|_    	CVE-2018-1283	3.5	https://vulners.com/cve/CVE-2018-1283
+10000/tcp open  http    MiniServ 1.910 (Webmin httpd)
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-litespeed-sourcecode-download: 
+| Litespeed Web Server Source Code Disclosure (CVE-2010-2333)
+| /index.php source code:
+| <h1>Error - Document follows</h1>
+|_<p>This web server is running in SSL mode. Try the URL <a href='https://Postman:10000/'>https://Postman:10000/</a> instead.<br></p>
+|_http-majordomo2-dir-traversal: ERROR: Script execution failed (use -d to debug)
+| http-phpmyadmin-dir-traversal: 
+|   VULNERABLE:
+|   phpMyAdmin grab_globals.lib.php subform Parameter Traversal Local File Inclusion
+|     State: UNKNOWN (unable to test)
+|     IDs:  CVE:CVE-2005-3299
+|       PHP file inclusion vulnerability in grab_globals.lib.php in phpMyAdmin 2.6.4 and 2.6.4-pl1 allows remote attackers to include local files via the $__redirect parameter, possibly involving the subform array.
+|       
+|     Disclosure date: 2005-10-nil
+|     Extra information:
+|       ../../../../../etc/passwd :
+|   <h1>Error - Document follows</h1>
+|   <p>This web server is running in SSL mode. Try the URL <a href='https://Postman:10000/'>https://Postman:10000/</a> instead.<br></p>
+|   
+|     References:
+|       http://www.exploit-db.com/exploits/1244/
+|_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3299
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+| http-vuln-cve2006-3392: 
+|   VULNERABLE:
+|   Webmin File Disclosure
+|     State: VULNERABLE (Exploitable)
+|     IDs:  CVE:CVE-2006-3392
+|       Webmin before 1.290 and Usermin before 1.220 calls the simplify_path function before decoding HTML.
+|       This allows arbitrary files to be read, without requiring authentication, using "..%01" sequences
+|       to bypass the removal of "../" directory traversal sequences.
+|       
+|     Disclosure date: 2006-06-29
+|     References:
+|       http://www.exploit-db.com/exploits/1997/
+|       http://www.rapid7.com/db/modules/auxiliary/admin/webmin/file_disclosure
+|_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-3392
+|_http-vuln-cve2017-1001000: ERROR: Script execution failed (use -d to debug)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=11/11%OT=22%CT=1%CU=33921%PV=Y%DS=2%DC=T%G=Y%TM=5DC8FA
+OS:F8%P=x86_64-pc-linux-gnu)SEQ(SP=102%GCD=1%ISR=109%TI=Z%CI=Z%II=I%TS=A)OP
+OS:S(O1=M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT11NW7%O4=M54DST11NW7%O5=M54DST
+OS:11NW7%O6=M54DST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)EC
+OS:N(R=Y%DF=Y%T=40%W=7210%O=M54DNNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=
+OS:AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(
+OS:R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%
+OS:F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N
+OS:%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%C
+OS:D=S)
+
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 8888/tcp)
+HOP RTT      ADDRESS
+1   35.16 ms 10.10.14.1
+2   28.26 ms 10.10.10.160
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 63.69 seconds

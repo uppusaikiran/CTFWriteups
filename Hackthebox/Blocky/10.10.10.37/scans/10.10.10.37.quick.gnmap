@@ -1,0 +1,4 @@
+# Nmap 7.80 scan initiated Mon Nov 11 14:04:55 2019 as: nmap -sC -sV -Pn --disable-arp-ping -oA /root/CTF/Hackthebox/Blocky/10.10.10.37/scans/10.10.10.37.quick 10.10.10.37
+Host: 10.10.10.37 ()	Status: Up
+Host: 10.10.10.37 ()	Ports: 21/open/tcp//ftp//ProFTPD 1.3.5a/, 22/open/tcp//ssh//OpenSSH 7.2p2 Ubuntu 4ubuntu2.2 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.18 ((Ubuntu))/, 8192/closed/tcp//sophos///	Ignored State: filtered (996)
+# Nmap done at Mon Nov 11 14:05:09 2019 -- 1 IP address (1 host up) scanned in 14.07 seconds
