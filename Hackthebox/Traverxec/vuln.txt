@@ -1,1 +1,16 @@
-Starting Nmap 7.80 ( https://nmap.org ) at 2019-11-18 01:20 EST
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-11-18 13:07 EST
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for 10.10.10.165
+Host is up (0.034s latency).
+Not shown: 998 filtered ports
+PORT   STATE  SERVICE
+22/tcp open   ssh
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+80/tcp closed http
+
+Nmap done: 1 IP address (1 host up) scanned in 42.46 seconds
