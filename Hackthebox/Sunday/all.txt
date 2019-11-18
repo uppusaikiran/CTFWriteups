@@ -1,0 +1,14 @@
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-11-14 01:25 EST
+NSE: Loaded 598 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 4) scan.
+Initiating NSE at 01:25
+NSE: [broadcast-sonicwall-discover] No network interface was supplied, aborting.
+NSE: [broadcast-ataoe-discover] No interface supplied, use -e
+NSE: [url-snarf] no network interface was supplied, aborting ...
+NSE: [targets-xml] Need to supply a file name with the targets-xml.iX argument
+NSE: [targets-ipv6-wordlist] Need to be executed for IPv6.
+NSE: [targets-ipv6-map4to6] This script is IPv6 only.
+NSE: [shodan-api] Error: Please specify your ShodanAPI key with the shodan-api.apikey argument
+NSE: [mtrace] A source IP must be provided through fromip argument.
+too short

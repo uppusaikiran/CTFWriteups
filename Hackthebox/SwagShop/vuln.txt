@@ -1,0 +1,175 @@
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-11-15 01:17 EST
+Nmap scan report for 10.10.10.140
+Host is up (0.027s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+80/tcp open  http
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.10.140
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://10.10.10.140:80/
+|     Form id: search_mini_form
+|     Form action: http://10.10.10.140/index.php/catalogsearch/result/
+|     
+|     Path: http://10.10.10.140:80/
+|     Form id: newsletter-validate-detail
+|     Form action: http://10.10.10.140/index.php/newsletter/subscriber/new/
+|     
+|     Path: http://10.10.10.140:80/index.php/
+|     Form id: search_mini_form
+|     Form action: http://10.10.10.140/index.php/catalogsearch/result/
+|     
+|     Path: http://10.10.10.140:80/index.php/
+|     Form id: newsletter-validate-detail
+|     Form action: http://10.10.10.140/index.php/newsletter/subscriber/new/
+|     
+|     Path: http://10.10.10.140:80/index.php/customer/account/login/
+|     Form id: search_mini_form
+|     Form action: http://10.10.10.140/index.php/catalogsearch/result/
+|     
+|     Path: http://10.10.10.140:80/index.php/customer/account/login/
+|     Form id: login-form
+|     Form action: http://10.10.10.140/index.php/customer/account/loginPost/
+|     
+|     Path: http://10.10.10.140:80/index.php/customer/account/login/
+|     Form id: newsletter-validate-detail
+|     Form action: http://10.10.10.140/index.php/newsletter/subscriber/new/
+|     
+|     Path: http://10.10.10.140:80/index.php/5-x-hack-the-box-square-sticker.html
+|     Form id: search_mini_form
+|     Form action: http://10.10.10.140/index.php/catalogsearch/result/
+|     
+|     Path: http://10.10.10.140:80/index.php/5-x-hack-the-box-square-sticker.html
+|     Form id: product_addtocart_form
+|     Form action: http://10.10.10.140/index.php/checkout/cart/add/uenc/aHR0cDovLzEwLjEwLjEwLjE0MC9pbmRleC5waHAvNS14LWhhY2stdGhlLWJveC1zcXVhcmUtc3RpY2tlci5odG1sP19fX1NJRD1V/product/2/form_key/3X0dx3ZgImhc1bAF/
+|     
+|     Path: http://10.10.10.140:80/index.php/5-x-hack-the-box-square-sticker.html
+|     Form id: newsletter-validate-detail
+|     Form action: http://10.10.10.140/index.php/newsletter/subscriber/new/
+|     
+|     Path: http://10.10.10.140:80/index.php/privacy-policy-cookie-restriction-mode/
+|     Form id: search_mini_form
+|     Form action: http://10.10.10.140/index.php/catalogsearch/result/
+|     
+|     Path: http://10.10.10.140:80/index.php/privacy-policy-cookie-restriction-mode/
+|     Form id: newsletter-validate-detail
+|     Form action: http://10.10.10.140/index.php/newsletter/subscriber/new/
+|     
+|     Path: http://10.10.10.140:80/index.php/customer-service/
+|     Form id: search_mini_form
+|     Form action: http://10.10.10.140/index.php/catalogsearch/result/
+|     
+|     Path: http://10.10.10.140:80/index.php/customer-service/
+|     Form id: newsletter-validate-detail
+|     Form action: http://10.10.10.140/index.php/newsletter/subscriber/new/
+|     
+|     Path: http://10.10.10.140:80/index.php/5-x-hack-the-box-sticker.html
+|     Form id: search_mini_form
+|     Form action: http://10.10.10.140/index.php/catalogsearch/result/
+|     
+|     Path: http://10.10.10.140:80/index.php/5-x-hack-the-box-sticker.html
+|     Form id: product_addtocart_form
+|     Form action: http://10.10.10.140/index.php/checkout/cart/add/uenc/aHR0cDovLzEwLjEwLjEwLjE0MC9pbmRleC5waHAvNS14LWhhY2stdGhlLWJveC1zdGlja2VyLmh0bWw_X19fU0lEPVU,/product/3/form_key/TZXeEBxeiugC0z1r/
+|     
+|     Path: http://10.10.10.140:80/index.php/5-x-hack-the-box-sticker.html
+|     Form id: newsletter-validate-detail
+|     Form action: http://10.10.10.140/index.php/newsletter/subscriber/new/
+|     
+|     Path: http://10.10.10.140:80/index.php/
+|     Form id: search_mini_form
+|     Form action: http://10.10.10.140/index.php/catalogsearch/result/
+|     
+|     Path: http://10.10.10.140:80/index.php/
+|     Form id: newsletter-validate-detail
+|     Form action: http://10.10.10.140/index.php/newsletter/subscriber/new/
+|     
+|     Path: http://10.10.10.140:80/index.php/contacts/
+|     Form id: search_mini_form
+|     Form action: http://10.10.10.140/index.php/catalogsearch/result/
+|     
+|     Path: http://10.10.10.140:80/index.php/contacts/
+|     Form id: contactform
+|     Form action: http://10.10.10.140/index.php/contacts/index/post/
+|     
+|     Path: http://10.10.10.140:80/index.php/contacts/
+|     Form id: newsletter-validate-detail
+|     Form action: http://10.10.10.140/index.php/newsletter/subscriber/new/
+|     
+|     Path: http://10.10.10.140:80/index.php/about-magento-demo-store/
+|     Form id: search_mini_form
+|     Form action: http://10.10.10.140/index.php/catalogsearch/result/
+|     
+|     Path: http://10.10.10.140:80/index.php/about-magento-demo-store/
+|     Form id: newsletter-validate-detail
+|     Form action: http://10.10.10.140/index.php/newsletter/subscriber/new/
+|     
+|     Path: http://10.10.10.140:80/index.php/checkout/cart/
+|     Form id: search_mini_form
+|     Form action: http://10.10.10.140/index.php/catalogsearch/result/
+|     
+|     Path: http://10.10.10.140:80/index.php/checkout/cart/
+|     Form id: newsletter-validate-detail
+|     Form action: http://10.10.10.140/index.php/newsletter/subscriber/new/
+|     
+|     Path: http://10.10.10.140:80/index.php/catalogsearch/advanced/
+|     Form id: search_mini_form
+|     Form action: http://10.10.10.140/index.php/catalogsearch/result/
+|     
+|     Path: http://10.10.10.140:80/index.php/catalogsearch/advanced/
+|     Form id: form-validate
+|     Form action: http://10.10.10.140/index.php/catalogsearch/advanced/result/
+|     
+|     Path: http://10.10.10.140:80/index.php/catalogsearch/advanced/
+|     Form id: newsletter-validate-detail
+|     Form action: http://10.10.10.140/index.php/newsletter/subscriber/new/
+|     
+|     Path: http://10.10.10.140:80/index.php/hack-the-box-logo-t-shirt.html
+|     Form id: search_mini_form
+|     Form action: http://10.10.10.140/index.php/catalogsearch/result/
+|     
+|     Path: http://10.10.10.140:80/index.php/hack-the-box-logo-t-shirt.html
+|     Form id: product_addtocart_form
+|     Form action: http://10.10.10.140/index.php/checkout/cart/add/uenc/aHR0cDovLzEwLjEwLjEwLjE0MC9pbmRleC5waHAvaGFjay10aGUtYm94LWxvZ28tdC1zaGlydC5odG1sP19fX1NJRD1V/product/1/form_key/gjjKbe9YuAE5Pq1i/
+|     
+|     Path: http://10.10.10.140:80/index.php/hack-the-box-logo-t-shirt.html
+|     Form id: newsletter-validate-detail
+|     Form action: http://10.10.10.140/index.php/newsletter/subscriber/new/
+|     
+|     Path: http://10.10.10.140:80/index.php/customer/account/login/
+|     Form id: search_mini_form
+|     Form action: http://10.10.10.140/index.php/catalogsearch/result/
+|     
+|     Path: http://10.10.10.140:80/index.php/customer/account/login/
+|     Form id: login-form
+|     Form action: http://10.10.10.140/index.php/customer/account/loginPost/
+|     
+|     Path: http://10.10.10.140:80/index.php/customer/account/login/
+|     Form id: newsletter-validate-detail
+|_    Form action: http://10.10.10.140/index.php/newsletter/subscriber/new/
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-enum: 
+|   /app/: Potentially interesting directory w/ listing on 'apache/2.4.18 (ubuntu)'
+|   /errors/: Potentially interesting directory w/ listing on 'apache/2.4.18 (ubuntu)'
+|   /includes/: Potentially interesting directory w/ listing on 'apache/2.4.18 (ubuntu)'
+|_  /lib/: Potentially interesting directory w/ listing on 'apache/2.4.18 (ubuntu)'
+| http-slowloris-check: 
+|   VULNERABLE:
+|   Slowloris DOS attack
+|     State: LIKELY VULNERABLE
+|     IDs:  CVE:CVE-2007-6750
+|       Slowloris tries to keep many connections to the target web server open and hold
+|       them open as long as possible.  It accomplishes this by opening connections to
+|       the target web server and sending a partial request. By doing so, it starves
+|       the http server's resources causing Denial Of Service.
+|       
+|     Disclosure date: 2009-09-17
+|     References:
+|       http://ha.ckers.org/slowloris/
+|_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+
+Nmap done: 1 IP address (1 host up) scanned in 329.32 seconds

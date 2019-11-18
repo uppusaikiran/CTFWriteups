@@ -1,0 +1,22 @@
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-11-14 00:51 EST
+Warning: 10.10.10.76 giving up on port because retransmission cap hit (6).
+Nmap scan report for 10.10.10.76
+Host is up (0.30s latency).
+Not shown: 915 closed ports, 83 filtered ports
+PORT    STATE SERVICE VERSION
+79/tcp  open  finger  Sun Solaris fingerd
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+111/tcp open  rpcbind 2-4 (RPC #100000)
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+Aggressive OS guesses: Sun OpenSolaris 2008.11 (93%), Sun Solaris 10 (93%), Sun Solaris 9 or 10 (93%), Sun Solaris 9 or 10, or OpenSolaris 2009.06 snv_111b (93%), Sun Solaris 9 or 10 (SPARC) (92%), Sun Storage 7210 NAS device (91%), Oracle Solaris 11 (90%), Sun Solaris 8 (90%), Sun Solaris 9 (89%), Sun Solaris 8 (SPARC) (88%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+Service Info: OS: Solaris; CPE: cpe:/o:sun:sunos
+
+TRACEROUTE (using port 5900/tcp)
+HOP RTT       ADDRESS
+1   233.95 ms 10.10.14.1
+2   234.20 ms 10.10.10.76
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 100.23 seconds

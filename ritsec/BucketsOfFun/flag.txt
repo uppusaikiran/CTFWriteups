@@ -1,0 +1,4 @@
+Use https://bucketsoffun-ctf.s3.amazonaws.com/ method to List Bad Permissions
+
+Flag : RITSEC{LIST_HIDDEN_FILES}
+ 
