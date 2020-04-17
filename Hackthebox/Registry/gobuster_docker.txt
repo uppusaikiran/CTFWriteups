@@ -1,0 +1,27 @@
+===============================================================
+Gobuster v3.0.1
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
+===============================================================
+[+] Url:            http://docker.registry.htb
+[+] Threads:        10
+[+] Wordlist:       /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+[+] Status codes:   200,204,301,302,307,401,403
+[+] User Agent:     gobuster/3.0.1
+[+] Timeout:        10s
+===============================================================
+2020/04/11 22:18:47 Starting gobuster
+===============================================================
+/v2 (Status: 301)
+/http%3A%2F%2Fwww (Status: 301)
+/http%3A%2F%2Fyoutube (Status: 301)
+/http%3A%2F%2Fblogs (Status: 301)
+/http%3A%2F%2Fblog (Status: 301)
+/**http%3A%2F%2Fwww (Status: 301)
+/http%3A%2F%2Fcommunity (Status: 301)
+/http%3A%2F%2Fradar (Status: 301)
+/http%3A%2F%2Fjeremiahgrossman (Status: 301)
+/http%3A%2F%2Fweblog (Status: 301)
+/http%3A%2F%2Fswik (Status: 301)
+===============================================================
+2020/04/11 22:30:01 Finished
+===============================================================
