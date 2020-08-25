@@ -1,0 +1,11 @@
+[0;32m---------------------Recon Recommendations----------------------
+[0m
+[0m
+[0;33mSMB Recon:
+[0m
+smbmap -H 10.10.248.88 | tee recon/smbmap_10.10.248.88.txt
+smbclient -L "//10.10.248.88/" -U "guest"% | tee recon/smbclient_10.10.248.88.txt
+
+
+
+

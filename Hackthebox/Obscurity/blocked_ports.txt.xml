@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Mon May 11 01:18:49 2020 as: nmap -p 80,9000 -oA blocked_ports.txt -sT 10.10.10.168 -->
+<nmaprun scanner="nmap" args="nmap -p 80,9000 -oA blocked_ports.txt -sT 10.10.10.168" start="1589174329" startstr="Mon May 11 01:18:49 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="connect" protocol="tcp" numservices="2" services="80,9000"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1589174329" endtime="1589174329"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.10.10.168" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="9000"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="cslistener" method="table" conf="3"/></port>
+</ports>
+<times srtt="38192" rttvar="29439" to="155948"/>
+</host>
+<runstats><finished time="1589174329" timestr="Mon May 11 01:18:49 2020" elapsed="0.17" summary="Nmap done at Mon May 11 01:18:49 2020; 1 IP address (1 host up) scanned in 0.17 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

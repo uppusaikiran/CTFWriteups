@@ -1,0 +1,69 @@
+# Nmap 7.80 scan initiated Sat Aug 22 12:43:03 2020 as: nmap -Pn -sV --script vuln -p8080 -oN nmap/Vulns_10.10.10.198.nmap 10.10.10.198
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for 10.10.10.198
+Host is up (0.23s latency).
+
+PORT     STATE SERVICE VERSION
+8080/tcp open  http    Apache httpd 2.4.43 ((Win64) OpenSSL/1.1.1g PHP/7.4.6)
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.10.198
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://10.10.10.198:8080/
+|     Form id: 
+|     Form action: include/process_login.php
+|     
+|     Path: http://10.10.10.198:8080/facilities.php
+|     Form id: 
+|     Form action: include/process_login.php
+|     
+|     Path: http://10.10.10.198:8080/packages.php
+|     Form id: 
+|     Form action: include/process_login.php
+|     
+|     Path: http://10.10.10.198:8080/about.php
+|     Form id: 
+|     Form action: include/process_login.php
+|     
+|     Path: http://10.10.10.198:8080/contact.php
+|     Form id: 
+|     Form action: include/process_login.php
+|     
+|     Path: http://10.10.10.198:8080/index.php
+|     Form id: 
+|_    Form action: include/process_login.php
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-enum: 
+|_  /icons/: Potentially interesting folder w/ directory listing
+|_http-server-header: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.6
+| http-slowloris-check: 
+|   VULNERABLE:
+|   Slowloris DOS attack
+|     State: LIKELY VULNERABLE
+|     IDs:  CVE:CVE-2007-6750
+|       Slowloris tries to keep many connections to the target web server open and hold
+|       them open as long as possible.  It accomplishes this by opening connections to
+|       the target web server and sending a partial request. By doing so, it starves
+|       the http server's resources causing Denial Of Service.
+|       
+|     Disclosure date: 2009-09-17
+|     References:
+|       http://ha.ckers.org/slowloris/
+|_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-trace: TRACE is enabled
+|_http-vuln-cve2017-1001000: ERROR: Script execution failed (use -d to debug)
+| vulners: 
+|   cpe:/a:apache:http_server:2.4.43: 
+|     	CVE-2020-11984	7.5	https://vulners.com/cve/CVE-2020-11984
+|     	CVE-2020-9490	5.0	https://vulners.com/cve/CVE-2020-9490
+|_    	CVE-2020-11993	4.3	https://vulners.com/cve/CVE-2020-11993
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Aug 22 12:49:27 2020 -- 1 IP address (1 host up) scanned in 384.37 seconds

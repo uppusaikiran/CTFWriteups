@@ -1,0 +1,4 @@
+# Nmap 7.80 scan initiated Mon May 11 01:18:49 2020 as: nmap -p 80,9000 -oA blocked_ports.txt -sT 10.10.10.168
+Host: 10.10.10.168 ()	Status: Up
+Host: 10.10.10.168 ()	Ports: 80/closed/tcp//http///, 9000/closed/tcp//cslistener///
+# Nmap done at Mon May 11 01:18:49 2020 -- 1 IP address (1 host up) scanned in 0.17 seconds

@@ -1,0 +1,18 @@
+# Nmap 7.80 scan initiated Sat May 23 16:30:32 2020 as: nmap -Pn -sV --script vulners --script-args mincvss=7.0 -p135,139,445,3389,49152,49153,49154,49158,49160 -oN nmap/CVEs_10.10.248.88.nmap 10.10.248.88
+Nmap scan report for 10.10.248.88
+Host is up (0.23s latency).
+
+PORT      STATE SERVICE            VERSION
+135/tcp   open  msrpc              Microsoft Windows RPC
+139/tcp   open  netbios-ssn        Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds       Microsoft Windows 7 - 10 microsoft-ds (workgroup: WORKGROUP)
+3389/tcp  open  ssl/ms-wbt-server?
+49152/tcp open  msrpc              Microsoft Windows RPC
+49153/tcp open  msrpc              Microsoft Windows RPC
+49154/tcp open  msrpc              Microsoft Windows RPC
+49158/tcp open  msrpc              Microsoft Windows RPC
+49160/tcp open  msrpc              Microsoft Windows RPC
+Service Info: Host: JON-PC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat May 23 16:31:37 2020 -- 1 IP address (1 host up) scanned in 65.29 seconds
