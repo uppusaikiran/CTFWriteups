@@ -1,0 +1,13 @@
+# Nmap 7.80 scan initiated Wed Sep  2 13:07:21 2020 as: nmap -Pn -sV --script vulners --script-args mincvss=7.0 -p80 -oN nmap/CVEs_10.10.10.191.nmap 10.10.10.191
+Nmap scan report for 10.10.10.191
+Host is up (0.10s latency).
+
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Apache httpd 2.4.41 ((Ubuntu))
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+| vulners: 
+|   cpe:/a:apache:http_server:2.4.41: 
+|_    	CVE-2020-11984	7.5	https://vulners.com/cve/CVE-2020-11984
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Sep  2 13:07:38 2020 -- 1 IP address (1 host up) scanned in 16.60 seconds
